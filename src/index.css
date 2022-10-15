@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+:root {
+  --ModerateBlue: hsl(238, 40%, 52%);
+  --SoftRed: hsl(358, 79%, 66%);
+  --LightGrayishBlue: hsl(239, 57%, 85%);
+  --PaleRed: hsl(357, 100%, 86%);
+  --DarkBlue: hsl(212, 24%, 26%);
+  --GrayishBlue: hsl(211, 10%, 45%);
+  --LightGray: hsl(223, 19%, 93%);
+  --VeryLightGray: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+.container {
+  background-color: var(--VeryLightGray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  max-width: 1440px;
+  overflow: scroll;
+}
+
+.active_box {
+  display: grid;
+  max-width: 600px;
+  height: 80vh;
+  justify-items: flex-end;
+}
+
+@media (max-width: 600px) {
+  .active_box {
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    max-width: max-content;
+    margin: 20px;
+  }
+  
+}
