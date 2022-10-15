@@ -10,6 +10,7 @@ const CommentBox = ({
   rep,
   item,
   use_id,
+  replyingTo,
 }) => {
   const [replay, setReplay] = useState(false);
   const [edit, setEdit] = useState(false);
@@ -74,9 +75,9 @@ const CommentBox = ({
 
     const userIdTrue = user => {
 
-      if (user) {
-        return '@'+ user
-      }
+      if (replyingTo) {
+        return '@'+ replyingTo
+      } else return null
     }
     
 

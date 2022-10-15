@@ -14,6 +14,7 @@ const Comment = ({ comment, replies, currentUser, currentUserPic, item }) => {
       key={comment?.id}
       rep={comment}
       item={item}
+      replyingTo={comment.replyingTo}
       use_id={comment.user?.username}
       />
         <>
@@ -26,6 +27,7 @@ const Comment = ({ comment, replies, currentUser, currentUserPic, item }) => {
                       key={reply.id}
                       rep={reply}
                       item={item}
+                      replyingTo={reply.replyingTo}
                       use_id={comment.user?.username}
                     />
                   </div>
